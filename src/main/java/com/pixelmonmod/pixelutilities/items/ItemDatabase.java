@@ -10,30 +10,38 @@ import nova.core.item.ItemManager;
 public class ItemDatabase {
 
     //Coins
-    final ItemFactory coin1;
-    final ItemFactory coin5;
-    final ItemFactory coin10;
-    final ItemFactory coin50;
-    final ItemFactory coin100;
+    public static ItemFactory coin1;
+    public static ItemFactory coin5;
+    public static ItemFactory coin10;
+    public static ItemFactory coin50;
+    public static ItemFactory coin100;
 
     //Badges
-    final ItemFactory bugBadge;
-    final ItemFactory darkBadge;
-    final ItemFactory dragonBadge;
-    final ItemFactory electricBadge;
-    final ItemFactory fightingBadge;
-    final ItemFactory fireBadge;
-    final ItemFactory flyingBadge;
-    final ItemFactory ghostBadge;
-    final ItemFactory grassBadge;
-    final ItemFactory groundBadge;
-    final ItemFactory iceBadge;
-    final ItemFactory normalBadge;
-    final ItemFactory poisonBadge;
-    final ItemFactory psychicBadge;
-    final ItemFactory rockBadge;
-    final ItemFactory steelBadge;
-    final ItemFactory waterBadge;
+    public static ItemFactory bugBadge;
+    public static ItemFactory darkBadge;
+    public static ItemFactory dragonBadge;
+    public static ItemFactory electricBadge;
+    public static ItemFactory fightingBadge;
+    public static ItemFactory fireBadge;
+    public static ItemFactory flyingBadge;
+    public static ItemFactory ghostBadge;
+    public static ItemFactory grassBadge;
+    public static ItemFactory groundBadge;
+    public static ItemFactory iceBadge;
+    public static ItemFactory normalBadge;
+    public static ItemFactory poisonBadge;
+    public static ItemFactory psychicBadge;
+    public static ItemFactory rockBadge;
+    public static ItemFactory steelBadge;
+    public static ItemFactory waterBadge;
+
+    //Ore related
+    public static ItemFactory amethyst;
+    public static ItemFactory crystal;
+    public static ItemFactory ruby;
+    public static ItemFactory sapphire;
+    public static ItemFactory silicon;
+
 
     public ItemDatabase(ItemManager itemManager) {
         //Coins
@@ -61,6 +69,13 @@ public class ItemDatabase {
         rockBadge = itemManager.register(args -> new GenericItem("rockBadge", TextureDatabase.rockBadge, "Badges"));
         steelBadge = itemManager.register(args -> new GenericItem("steelBadge", TextureDatabase.steelBadge, "Badges"));
         waterBadge = itemManager.register(args -> new GenericItem("waterBadge", TextureDatabase.waterBadge, "Badges"));
+
+        //Ore related
+        amethyst = itemManager.register(args -> new GenericItem("amethyst", TextureDatabase.amethystItem));
+        crystal = itemManager.register(args -> new GenericItem("crystal", TextureDatabase.crystalItem));
+        ruby = itemManager.register(args -> new GenericItem("ruby", TextureDatabase.rubyItem));
+        sapphire = itemManager.register(args -> new GenericItem("sapphire", TextureDatabase.sapphireItem));
+        silicon = itemManager.register(args -> new GenericItem("silicon", TextureDatabase.siliconItem));
     }
 
 }
